@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0041d0;
+  --secondary-color: #ff0072;
+  --border-color: #1a192b;
+  --background-color: #fcfcfc;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.chatflow .dndnode.input {
+  border-color: var(--primary-color);
+}
+
+.chatflow .dndnode.output {
+  border-color: var(--secondary-color);
+}
+
+
+.chatflow {
+  flex-direction: row;
+  display: flex;
+  height: 100vh;
+}
+
+.chatflow aside {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: var(--background-color);
+  width: 30vh;
+}
+
+.chatflow aside > * {
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.chatflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
